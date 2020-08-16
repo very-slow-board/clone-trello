@@ -1,0 +1,28 @@
+.header_wrap {
+    background-color: #006BA3;
+    height: 40px;
+    width: 100%;
+}
+
+.header_wrap .left_container {
+    width: 355px;
+    height: inherit;
+    display: flex;
+}
+
+.left_container .left__item {
+    background-color: #4D98BF;
+    height: 33px;
+    border-radius: 3px;
+    margin-left: 4px;
+    margin-top: 3px;
+    width: 35px;
+}
+
+.left_container .left__boards_btn {
+    width: 93px;
+}
+
+.left_container .left__search {
+    width: 180px;
+}
