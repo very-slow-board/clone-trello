@@ -1,10 +1,11 @@
 import React from 'react';
+import PageTemplate from 'components/common/PageTemplate';
 
-const BoardPage = () => {
+const BoardPage = ({match}) => {
   return (
-    <div>
-      Board
-    </div>
+    <PageTemplate>
+      Board, {match.params.id}
+    </PageTemplate>
   );
 };
 
