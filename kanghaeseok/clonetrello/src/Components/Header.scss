@@ -18,12 +18,39 @@ $bg-color: #006BA3;
     margin-left: 4px;
     margin-top: 3px;
     width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item__icon {
+    color: white;
+}
+
+.item__text {
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.item__icon.search-icon {
+    position: absolute;
+    right: 5px;
+}
+
+#input-search {
+    width: 95%;
+    height: 90%;
+    background-color: #4D98BF;
+    border: none;
 }
 
 .left_container .left__boards_btn {
     width: 93px;
+    display: flex;
+    justify-content: space-around;
 }
 
 .left_container .left__search {
     width: 180px;
+    position: relative;
 }
