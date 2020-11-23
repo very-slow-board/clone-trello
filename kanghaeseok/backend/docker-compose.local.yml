@@ -16,18 +16,19 @@ services:
       - --character-set-server=utf8mb4
       - --collation-server=utf8mb4_unicode_ci
 
-  trello-server:
-    build:
-      context: .
-      dockerfile: ./Dockerfile-dev
-    ports:
-      - "8888:8888"
-    command:
-      - bash
-      - -c
-      - |
-        npm start
-    restart: always
-    volumes:
-      - ./:/app/
+  # trello-server:
+  #   build:
+  #     context: .
+  #     dockerfile: ./Dockerfile-dev
+  #   ports:
+  #     - "8888:8888"
+  #   command:
+  #     - bash
+  #     - -c
+  #     - |
+  #       sequelize-cli db:migrate
+  #       npm start
+  #   restart: always
+  #   volumes:
+  #     - ./:/app/
 
