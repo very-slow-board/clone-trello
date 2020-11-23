@@ -1,0 +1,33 @@
+version: "3"
+
+volumes:
+  trello-volume: {}
+
+services:
+  trello-db:
+    image: mysql:8.0.17
+    ports:
+      - "3305:3306"
+    volumes:
+      - trello-volume:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+
+  trello-server:
+    build:
+      context: .
+      dockerfile: ./Dockerfile-dev
+    ports:
+      - "8888:8888"
+    command:
+      - bash
+      - -c
+      - |
+        npm start
+    restart: always
+    volumes:
+      - ./:/app/
+
