@@ -10,7 +10,7 @@ const App = () => (
     <BrowserRouter>
       <Switch>
         <Route path="/" exact component={PageHome} />
-        <Route path="/boards/list" exact component={PageBoardList} />
+        <Route path="/boards" exact component={PageBoardList} />
         <Redirect from="*" to="/" />
       </Switch>
     </BrowserRouter>
