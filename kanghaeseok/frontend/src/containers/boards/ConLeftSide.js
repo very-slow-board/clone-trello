@@ -1,4 +1,4 @@
-import MenuItem from "./MenuItem";
+const MenuItem = () => <h1>menu item</h1>;
 
 const ConLeftSide = () => (
   <>

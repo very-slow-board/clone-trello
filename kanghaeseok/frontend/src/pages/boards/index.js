@@ -1,6 +1,6 @@
-import ConContent from "containers/boards/list/ConContent";
+import ConContent from "containers/boards/ConContent";
 import ConHeader from "containers/common/ComHeader";
-import ConLeftSide from "containers/boards/list/ConLeftSide";
+import ConLeftSide from "containers/boards/ConLeftSide";
 
 const PageBoardList = () => (
   <>
