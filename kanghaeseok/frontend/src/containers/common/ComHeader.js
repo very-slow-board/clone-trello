@@ -1,6 +1,8 @@
 import Button from "components/Button";
 import styled from "styled-components";
 
+import { faCoffee } from "@fortawesome/free-solid-svg-icons";
+
 const Container = styled.header`
   background-color: #00609a;
   width: 100%;
@@ -22,7 +24,8 @@ const CenterImage = styled.div`
 const LeftContainer = styled.div`
   width: 100px;
   height: inherit;
-  background-color: red;
+  display: flex;
+  align-items: center;
 `;
 
 const RightContainer = styled.div`
@@ -31,12 +34,29 @@ const RightContainer = styled.div`
   background-color: blue;
 `;
 
-const ComHeader = () => (
-  <Container>
-    <LeftContainer />
-    <CenterImage />
-    <RightContainer />
-  </Container>
-);
+const ComHeader = () => {
+  return (
+    <Container>
+      <LeftContainer>
+        <Button
+          props={{
+            icon: { classes: faCoffee, color: "white" },
+            style: {
+              width: 35,
+              height: 35,
+              display: "flex",
+              justifyContent: "center",
+            },
+          }}
+        />
+        <Button />
+        <Button />
+        <Button />
+      </LeftContainer>
+      <CenterImage />
+      <RightContainer />
+    </Container>
+  );
+};
 
 export default ComHeader;
